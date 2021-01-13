@@ -1,0 +1,306 @@
+a{text-decoration: none;}
+@media all and (min-width: 760px){
+
+#wrap{
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    overflow: hidden;
+}
+section{
+    width: 100%;
+    height: 1080px;
+    background-color:black;
+    position: relative;
+}
+/* -------------------section1---- */
+#main{
+    background-image: url(image/wallback_2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#circle{
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    border: 10px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+   position: absolute;
+   top: 5%;
+   left: 30%;
+   box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF;
+   box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF inset;
+}
+#neontext,
+#shadow {
+    position:absolute;
+    margin: 0;
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    font-family: 'Noto Serif', serif;
+    transform: rotate(345deg);
+    color: transparent;
+    text-stroke: 0.5rem rgb(255, 255, 255);
+    -webkit-text-stroke: 0.5rem rgba(255,255,255, 0.5);
+}
+#neontext {
+    text-stroke: 0.5rem rgba(255,255,255, 0.5);
+    -webkit-text-stroke: 0.5rem rgba(255,255,255, 0.5);
+}   
+#shadow {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+}
+.glow {
+    animation: neon1 linear infinite 3s;
+    will-change: opacity;  
+}
+.blink {
+    animation: blink linear infinite 2s;
+}
+@keyframes neon1 {
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.6;
+    }
+}
+@keyframes blink {
+    70% {
+        opacity: 1;
+    }
+    79% {
+        opacity: 0;
+    }
+    81% {
+        opacity: 1;
+    }
+    82% {
+        opacity: 0;
+    }
+    83% {
+        opacity: 1;
+    }
+    92% {
+        opacity: 0;
+    }
+    92.5% {
+        opacity: 1;
+    }
+}
+/* ------------section2----- */
+#chara{
+    background-image: url(image/backwet.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#charabox{
+    width: 639px;
+    height: 583px;
+    margin: 0 auto;
+    position: relative;
+    top: 20%;
+    overflow: hidden;
+    background-image: url(image/cut_2.jpg);
+}
+.character{
+    width: 400px;
+    height: 400px;
+    /* background-color: tomato; */
+    text-align: center;
+    font-size: 30px;
+    color: rgb(247, 252, 0);
+    text-shadow: 0 -4px 8px blue, 0 3px 8px #ff00ff;
+    position: absolute;
+    font-family: 'Noto Serif', serif;
+}
+#man{
+    float: left;
+    left: 10%;
+}
+#woman{
+ right: 10%;
+    top: 30%;
+}
+/* ---------------section3---------- */
+#story{
+    background-image: url(image/dance.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#story > h1 {
+    width: 900px;
+    height: 100px;
+    text-align: right;
+    color: rgb(247, 252, 0);
+    text-shadow: 0 -4px 8px blue, 0 3px 8px #ff00ff;
+    font-family: 'Noto Serif', serif;
+    position: relative;
+    top: 13%;
+    left: 7%;
+    font-size: 40px;
+}
+.btn{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    position: absolute;
+    float: left;
+    top:65%;
+    left: 20%;
+    color: rgb(247, 252, 0);
+    text-shadow: 0 -4px 8px blue, 0 3px 8px #ff00ff;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+}
+#prevbtn {
+     cursor:pointer; 
+     position:relative;
+     left: 25%;
+    }
+#nextbtn {
+     cursor:pointer; 
+     position:relative; 
+     left: 35%;
+    }
+#mask{
+    width: 900px;
+    height: 400px;
+   position: absolute;
+   left: 8%;
+   top: 20%;
+     overflow: hidden; 
+    color: rgb(247, 252, 0);
+    font-size:30px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 -4px 8px blue, 0 3px 8px #ff00ff;
+}
+#slider { width:6300px; 
+    float: left;
+    position: relative;
+}
+.slider_in {
+     float:left; 
+     width:900px; 
+     height:400px; }
+/* ------------------section4----------- */
+#scene{
+    background-image: url(image/star_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#scene_p > img {
+    position: absolute;
+    height: 466px;
+    margin: 0 auto;
+    top: 15%;
+    left: 25%;
+}
+#scene > p {
+    position: relative;
+    top: 60%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    color: rgb(247, 252, 0);
+    text-shadow: 0 -4px 8px blue, 0 3px 8px #ff00ff;
+    font-family: 'Noto Serif', serif;
+
+}
+
+.line-1{
+    /* border-right: 2px solid rgba(255, 255, 255, .75); */
+    border-right: 2px solid transparent;
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.anim-typewriter_1{
+    animation: typewriter 6s steps(44) 1s 1 normal both,
+        blinkTextCursor 700ms steps(44) 13 normal;
+}
+.anim-typewriter_2{
+    animation: typewriter 7s steps(44) 8s 1 normal both,
+        blinkTextCursor 700ms steps(44) 17 normal;
+}
+.anim-typewriter_3{
+    animation: typewriter 7s steps(44) 13s 1 normal both,
+        blinkTextCursor 700ms steps(44) 24 normal;
+}
+@keyframes typewriter{
+
+    from{
+        width: 0;
+    }
+    to{
+        width: 55vw;
+    }
+}
+@keyframes blinkTextCursor{
+    from{
+        border-right-color: rgba(255, 251, 0, 0.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+/* ---------------section5-------------- */
+#credit{
+    background-image: url(image/back.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+#container  {
+    margin: 0 auto;
+    height: auto;
+    width: 1000px;
+    /* background-color: violet; */
+    text-align: center;
+    color: whitesmoke;
+    font-size: 35px;
+    /* font-family: 'Noto Serif', serif; */
+  }
+  .credits {
+    text-shadow: 0 -4px 8px blue, 0 3px 8px #ff00ff;
+    -webkit-animation: move 30s linear infinite;  
+    -moz-animation: move 30s linear infinite;  
+    animation: move 30s linear infinite;  
+  }
+  .credits > p {
+    display: block;
+    margin: 5px 0;
+    width: 100%;
+  }
+  @-webkit-keyframes move {
+      0% {margin-top: 50%;}
+      100% {margin-top: -300%;}
+  }
+  @-moz-keyframes move {
+      0% {margin-top: 50%;}
+      100% {margin-top: -300%;}
+  }
+  @-o-keyframes move {
+      0% {margin-top: 50%;}
+      100% {margin-top: -300%;}
+  }
+  @keyframes move {
+      0% {margin-top: 50%;}
+      100% {margin-top: -300%;}
+  }
+
+}
+
+
+
+
+
+

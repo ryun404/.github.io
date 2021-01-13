@@ -1,0 +1,454 @@
+body::-webkit-scrollbar {
+    display: none; 
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', 'Noto Sans KR',sans-serif;
+    position: relative;
+}
+#container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+header{
+    width: 100vw;
+    height: 5%;
+}
+.logo > img {
+width: 1.5%;
+height: auto;
+position: fixed;
+top: 1.5%;
+left: 1.5%;
+z-index:9999;
+}
+#btn{
+    position: fixed;
+    width: 50px;
+    height: 25px;
+    right: 1.5%;
+    top: 2.5%;
+    z-index: 9999;
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+}
+#btn.active li:nth-child(2),
+#btn.active li:nth-child(4) {
+			opacity: 0;
+		}
+#btn.active li:nth-child(1) {
+            transform: rotate(45deg);
+            width: 45px;
+		}
+#btn.active li:nth-child(3) {
+            transform: rotate(-45deg);
+            width: 45px;
+		}
+#btn > li{
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: #000;
+}
+#btn > li:nth-child(2){
+    top:10px;
+}
+#btn > li:last-child{
+    top:20px;
+}
+#menu{
+    position: fixed;
+    width: 100%;
+    height: 0%;
+    background-color: #fec300;
+    opacity: 0;
+	visibility: hidden;
+    transition: opacity .3s, visibility .3s, height .3s;
+    z-index: 9998;
+}
+#menuin > ul{
+    position: absolute;
+    width:100%;
+    text-align: center;
+    top: 50%; 
+    left: 50%;
+    transform:  translate(-50%, -50%);
+}
+#menuin > ul > li > a {
+    color: #000;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 75px;
+    line-height: 90px;
+    font-weight: 600;
+	text-decoration: none;
+	transition: opacity .2s ease;
+    opacity: 1;
+}
+#menuin > ul > li > a:hover {
+    opacity: .5; 
+    transition: all 400ms ease-in-out;
+}
+#menuin > ul > li > a::after {
+    content: "";
+    border-bottom: solid 4px #000;
+    position: absolute;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 45px;
+    transition: width 500ms ease-in-out;
+}
+#menuin > ul > li:nth-child(1) > a:hover::after {
+    width: 240px;
+}
+#menuin > ul > li:nth-child(2) > a:hover::after {
+    width: 300px;
+}
+#menuin > ul > li:nth-child(3) > a:hover::after {
+    width: 490px;
+}
+#menuin > ul > li:nth-child(4) > a:hover::after {
+    width: 380px;
+}
+#menu.visible {
+	opacity: 1;
+	visibility: visible;
+    height: 100vh;
+}
+#menu.unvisible {
+	opacity: 0;
+	visibility: hidden;
+    height: 100vh;
+}
+/* ----------header end----------- */
+#scrolldown{
+    width: 185px;
+    height: 105px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    animation: bounce 1000ms cubic-bezier(0.245, 0.325, 0.510, 1.305) infinite alternate;
+    z-index: 9990;
+}
+@keyframes bounce {
+  0% {margin-bottom:2%}
+  50% {margin-bottom:1%}
+  100% {margin-bottom:1.5%}
+}
+#scrolldown > h1{
+  font-family: 'Montserrat', sans-serif;
+    color: #dddddd;
+    font-size: 15px;
+    text-align: center;
+}
+.scroll{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fec300;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.scroll:nth-child(1){
+    margin-top: 15px;
+    opacity: 0.2;
+}
+.scroll:nth-child(2){
+  opacity: 0.4;
+} 
+.scroll:nth-child(3){
+  opacity: 0.7;
+} 
+.scroll2{
+    width: 13px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 8px;
+    border-radius: 30% 30% 30% 30%;
+    background-color: #fec300;
+}
+.scroll3{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #e7e7e7;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.scroll3:nth-child(1){
+    margin-top: 15px;
+    opacity: 0.2;
+}
+.scroll3:nth-child(2){
+  opacity: 0.4;
+} 
+.scroll3:nth-child(3){
+  opacity: 0.7;
+} 
+.scroll4{
+    width: 13px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 8px;
+    border-radius: 30% 30% 30% 30%;
+    background-color: #e7e7e7;
+}
+/* ------scroll bounce end------ */
+section#main {
+    top: 0;
+}
+#first_box {
+   position: absolute;
+   width: 70%;
+   height: 50%;
+   top: 45%; 
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+#textbox{
+    float: left;
+    margin-top: 10%;
+    text-align: right;
+}
+#hello{
+    font-size: 110px;
+}
+#hello2{
+    margin-top: 2%;
+    font-size: 70px;
+    color: #fec300;
+}
+#hello3{
+    position: relative;
+    top: 70px;
+    color: #a8a8a8;
+    font-size: 25px;
+    line-height: 30px;
+}
+#main  .main-img{
+    float: right;
+}
+/* ----------section1 end-------------- */
+#intro > img{
+   position: absolute;
+   top: 20%;
+   left: 12%;
+   width: 550px;
+   height: auto;
+}
+#about{
+    width: 40%;
+    height: 30%;
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    transform:  translate(-50%, -50%);
+}
+#introtext{
+    font-family: 'Noto Sans KR',sans-serif;;
+    font-size: 55px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+#introtext > h2{
+    display: inline;
+}
+#introtext > h1{
+    color: #fec300;
+    display: inline;
+}
+#btns{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+}
+#btns > li{
+    font-family: 'Montserrat',sans-serif;
+    width:250px;
+    height: 45px;
+    font-size: 30px;
+    font-weight: 800;
+    border: 2px solid #000;
+    float: left;    
+    padding-top:10px;
+    text-align: center;
+}
+#btns  >li:nth-child(2){
+    margin-left:100px;
+}
+#btns > li >a{
+    text-decoration: none;
+    color: #000;
+}
+#skillbox{
+    position: absolute;
+    width: 57%;
+    height: 60%;
+    background-color: #fec300;
+    z-index: 9998;
+    right: 0;
+    top: 15%;
+    display: none;
+}
+#skillbye{
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    right: 5%;
+    top: 10%;
+}
+#skillbye > li{
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: #000;
+}
+#skillbye li:nth-child(2),
+#skillbye li:nth-child(4) {
+			opacity: 0;
+		}
+#skillbye li:nth-child(1) {
+    transform: rotate(45deg);
+}
+#skillbye li:nth-child(3) {
+    transform: rotate(-45deg);
+}
+#skillbox > h1{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 55px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+.skilltext{
+    font-size: 26px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    line-height: 2;
+    float: left;
+    padding: 20% 15%;
+}
+#skilltext2{
+    padding-left: 7%;
+}
+/* ---------section2 end----------- */
+#bgcolor{
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    background-color: #fec300;
+    right: 0;
+}
+.sliderbtn{
+    position: absolute;
+    font-size: 55px;
+    font-weight: 900;
+    top: 40%;
+    z-index: 9997;
+    cursor: pointer;
+}
+#nextbtn{
+    left: 48%;
+}
+#prevbtn{
+    left: 3%;
+}
+#wrap{
+    width: 400vw;
+    height: 100vh;
+}
+.slider{
+    width: 100vw; 
+    height: 100vh;
+    position: relative;
+    float: left;
+}
+.mockup{
+    width: 45%;
+    float: left; 
+    margin-top: 10%;
+    margin-left: 6%;   
+}
+.mockup>img{
+    width: 90%;
+    height: auto;
+}
+.slidertext{
+    font-family: 'Montserrat','Noto Sans KR',sans-serif;
+    width: 45%;
+    float: right;
+    margin-top: 10%;
+}
+.slidertext > h1{
+    font-size: 35px;
+}
+.slidertext > h2{
+    margin-top: 10px;
+    font-size: 25px;
+}
+.slidertext > span{
+    display: block;
+    padding-top: 10%;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.slidertext > a{
+    width: 200px;
+    height:20px;
+    border: 2px solid #fff;
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10%;
+}
+.slidertext > a:hover{
+    opacity: .5;
+}
+/* ---------section3 end------- */
+#contact{
+    background-color: #fec300;
+}
+#lasttext{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-size: 45px;
+}
+#lasttext > h2{
+    margin-top: 4%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+#contact > img{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform:  translate(-50%, -50%);
+}
+#address{
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    right:15%;
+    bottom: 20%;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+}
+/* -----section4 end----------- */
+footer{
+    width: 100%;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 200;
+    clear: both;
+}
+/* ------end----- */
